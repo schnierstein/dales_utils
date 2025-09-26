@@ -18,3 +18,12 @@ Script that help with reading in dales data, especially combining crosssections 
 
 Best look at the example and documention in code.
 
+
+# dales run JUWELS
+
+Three scripts working like this:
+
+`runDALES.sh` is the script that is submitted to SLURM via `sbatch`.
+
+If job has to be split, use `submission_script.sh` and sync with the `change_nml.py` script.
+Creates jobs dependent on each other and `change_nml.py` changes the namelist between jobs to account for the right restarting file. Can change output options between jobs as well.
